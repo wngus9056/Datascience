@@ -1,1 +1,0 @@
-print('Nice Day')   # 'Nice Day'를 출력해라
