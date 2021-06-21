@@ -1,4 +1,4 @@
-#DataScience
+DataScience
 
 - 👋 Hi, I’m @wngus9056
 - 👀 I’m interested in ...
