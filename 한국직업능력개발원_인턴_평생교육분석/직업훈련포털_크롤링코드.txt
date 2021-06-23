@@ -1,0 +1,93 @@
+import pandas
+from bs4 import BeautifulSoup
+import requests
+from openpyxl.workbook import Workbook
+
+
+CommerceInfor = {}
+
+namelist = []
+costlist = []
+placelist = []
+manlist = []
+subtitlelist = []
+superviserlist = []
+telllist = []
+startlist = []
+endlist = []
+traintargetlist = []
+trainidlist = []
+trainnumlist = []
+howtrainidlist = []
+yardmanlist = []
+
+for i in range(1, 631):    
+
+    url = 'http://www.hrd.go.kr/jsp/HRDP/HRDPO00/HRDPOA60/HRDPOA60_1.jsp?authKey=9bUbQXJC3GVlBGOEFxtzYzRvXzFyLIZK&returnType=XML&outType=1&pageNum={}&pageSize=100&srchTraStDt=20190101&srchTraEndDt=20201111&sort=ASC&sortCol=TOT_FXNUM'.format(i)
+
+
+    req = requests.get(url)
+    html = req.text
+    soup = BeautifulSoup(html, 'html.parser')
+
+    name = soup.find_all('title')
+    cost = soup.find_all('courseman')
+    place = soup.find_all('address')
+    man = soup.find_all('regcourseman')
+    subtitle = soup.find_all('subtitle')
+    superviser = soup.find_all('superviser')
+    tell = soup.find_all('telno')
+    start = soup.find_all('trastartdate')
+    end = soup.find_all('traenddate')
+    traintarget = soup.find_all('traintarget')
+    trainid = soup.find_all('traintargetcd')
+    trainnum = soup.find_all('trprdegr')
+    howtrainid = soup.find_all('trprid')
+    yardman = soup.find_all('yardman')
+
+    for code in name:
+        namelist.append(code.text)
+    for code in cost:
+        costlist.append(code.text)
+    for code in place:
+        placelist.append(code.text)
+    for code in man:
+        manlist.append(code.text)
+    for code in subtitle:
+        subtitlelist.append(code.text)
+    for code in superviser:
+        superviserlist.append(code.text)
+    for code in tell:
+        telllist.append(code.text)
+    for code in start:
+        startlist.append(code.text)
+    for code in end:
+        endlist.append(code.text)
+    for code in traintarget:
+        traintargetlist.append(code.text)
+    for code in trainid:
+        trainidlist.append(code.text)
+    for code in trainnum:
+        trainnumlist.append(code.text)
+    for code in howtrainid:
+        howtrainidlist.append(code.text)
+    for code in yardman:
+        yardmanlist.append(code.text)
+
+        CommerceInfor['강좌명'] = namelist
+        CommerceInfor['수강료'] = costlist
+        CommerceInfor['장소'] = placelist
+        CommerceInfor['수강신청인원'] = manlist
+        CommerceInfor['부제목'] = subtitlelist
+        CommerceInfor['주관부처'] = superviserlist
+        CommerceInfor['전화번호'] = telllist
+        CommerceInfor['시작일'] = startlist
+        CommerceInfor['종료일'] = endlist
+        CommerceInfor['훈련대상'] = traintargetlist
+        CommerceInfor['훈련구분'] = trainidlist
+        CommerceInfor['훈련기관순차'] = trainnumlist
+        CommerceInfor['훈련과정ID'] = howtrainidlist
+
+        df = pandas.DataFrame(CommerceInfor)
+
+        df.to_excel("test2.xlsx")

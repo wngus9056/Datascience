@@ -1,0 +1,19 @@
+from collections import Counter
+count = Counter(ttt)
+
+print(count)
+Counter({'문해교육': 12, '영어': 8, '한자': 4, '놀이지도': 3, '자격증': 2, '주산': 2, '독서': 1, '작문': 1, '직업탐험': 1, '한국어': 1})
+
+
+key = {'문해교육': 12, '영어': 8, '한자': 4, '놀이지도': 3, '자격증': 2, '주산': 2, '독서': 1, '작문': 1, '직업탐험': 1, '한국어': 1}
+
+
+import stylecloud
+
+stylecloud.gen_stylecloud(text = key,
+                         font_path = "C:/Users/krivet/Downloads/final/KOPUBWORLD_TTF_FONTS/KoPubWorld Dotum Light.ttf",
+                         icon_name = "fas fa-circle",
+                         palette = "colorbrewer.diverging.Spectral_11",
+                         background_color = "white",
+                         gradient = "horizontal",
+                         output_name = "gkrdjq.png")

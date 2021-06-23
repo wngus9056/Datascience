@@ -1,0 +1,23 @@
+from konlpy.tag import Okt
+from collections import Counter
+
+file = open("C:/Users/krivet/Downloads/직업훈련포털/test.txt", "r", encoding="UTF8")
+lists = file.readlines()
+file.close()
+
+twitter = Twitter() 
+morphs = [] 
+
+for sentence in lists:
+    morphs.append(twitter.pos(sentence)) 
+
+
+noun_adj_adv_list=[]
+
+for sentence in morphs :
+    for word, tag in sentence :
+        if tag in ['Noun'] and ("것" not in word) and ("내" not in word) and ("나" not in word) and ("수" not in word) and ("게" not in word) and ("말" not in word) and ("급" not in word) and ("취득" not in word)\
+        and ("대덕구" not in word) and ("및" not in word) and ("과정" not in word):
+            noun_adj_adv_list.append(word)
+
+print(noun_adj_adv_list)
