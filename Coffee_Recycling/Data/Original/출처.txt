@@ -1,0 +1,20 @@
+품목별_수출액_수입액
+https://kosis.kr/statHtml/statHtml.do?orgId=360&tblId=DT_1R11001_FRM101&vw_cd=MT_ZTITLE&list_id=S2_2&seqNo=&lang_mode=ko&language=kor&obj_var_id=&itm_id=&conn_path=MT_ZTITLE
+음식_및_음료_업종별
+https://kosis.kr/statisticsList/statisticsListIndex.do?menuId=M_01_01&vwcd=MT_ZTITLE&parmTabId=M_01_01&parentId=O2.1;O_22.2;&outLink=Y#content-group
+온실가스
+https://kosis.kr/statHtml/statHtml.do?orgId=141&tblId=DT_14103_A000&vw_cd=MT_ZTITLE&list_id=T_6&seqNo=&lang_mode=ko&language=kor&obj_var_id=&itm_id=&conn_path=MT_ZTITLE
+* 단위
+- ppm(parts per million, 100만분의 1)
+- ppb(parts per billion, 10억분의 1)
+- ppb(parts per billion, 10억분의 1)
+- ppt(parts per trillion, 1조분의 1)
+- ppt(parts per trillion, 1조분의 1)
+인구
+https://jumin.mois.go.kr/#
+
+CU
+https://www.mk.co.kr/news/business/view/2021/06/609271/
+
+커피 전문점 수
+https://sgis.kostat.go.kr/view/thematicMap/thematicMapMain?stat_thema_map_id=DyqDKo9usM20160629174353430EKHJotIJLx&theme=CTGR_004&mapType=04&CTGRS=CTGR_001:recommend,CTGR_002:recommend,CTGR_003:recommend,CTGR_004:recommend,CTGR_005:recommend
