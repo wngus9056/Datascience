@@ -1,0 +1,24 @@
+SQL> show user;
+USER is "SCOTT"
+SQL> select * from membert01;
+
+MEM_NAME                                 MEM_ID                                   MEM_PWD                                  MEM_EMAIL                                                                    
+---------------------------------------- ---------------------------------------- ---------------------------------------- ----------------------------------------                                     
+MEM_PHONE                                MEM_ADDR                                                                                                                                                       
+---------------------------------------- ----------------------------------------                                                                                                                       
+¿À·»Áö                                   Orange                                   1234                                                                                                                  
+                                                                                                                                                                                                        
+                                                                                                                                                                                                        
+¿À·»Áö                                   Oragne                                   1234                                     Orange@test.com                                                              
+044                                      È«ÀÍ´ëÇÐ±³                                                                                                                                                     
+                                                                                                                                                                                                        
+
+SQL> delete from membert01;
+
+2 rows deleted.
+
+SQL> select * from membert01;
+
+no rows selected
+
+SQL> spool off

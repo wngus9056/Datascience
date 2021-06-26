@@ -1,0 +1,151 @@
+SQL> insert into membert01 values ('¿À·»Áö', 'Oragne1', '1234', 'Orange@test.com', '044', 'È«ÀÍ´ëÇÐ±³');
+
+1 row created.
+
+SQL> insert into membert01 values ('¿À·»Áö', 'Oragne2', '1234', 'Orange@test.com', '044', 'È«ÀÍ´ëÇÐ±³');
+
+1 row created.
+
+SQL> insert into membert01 values ('¿À·»Áö', 'Oragne3', '1234', 'Orange@test.com', '044', 'È«ÀÍ´ëÇÐ±³');
+
+1 row created.
+
+SQL> select * from membert01;
+
+MEM_NAME                                 MEM_ID                                   MEM_PWD                                  MEM_EMAIL                                                                    
+---------------------------------------- ---------------------------------------- ---------------------------------------- ----------------------------------------                                     
+MEM_PHONE                                MEM_ADDR                                                                                                                                                       
+---------------------------------------- ----------------------------------------                                                                                                                       
+¿À·»Áö                                   Oragne1                                  1234                                     Orange@test.com                                                              
+044                                      È«ÀÍ´ëÇÐ±³                                                                                                                                                     
+                                                                                                                                                                                                        
+¿À·»Áö                                   Oragne2                                  1234                                     Orange@test.com                                                              
+044                                      È«ÀÍ´ëÇÐ±³                                                                                                                                                     
+                                                                                                                                                                                                        
+¿À·»Áö                                   Oragne3                                  1234                                     Orange@test.com                                                              
+044                                      È«ÀÍ´ëÇÐ±³                                                                                                                                                     
+                                                                                                                                                                                                        
+
+SQL> delete from membert01 where mem_id = 'orange1';
+
+0 rows deleted.
+
+SQL> ed
+Wrote file afiedt.buf
+
+  1* delete from membert01 where mem_id = 'Orange1'
+SQL> /
+
+0 rows deleted.
+
+SQL> select * from membert01;
+
+MEM_NAME                                 MEM_ID                                   MEM_PWD                                  MEM_EMAIL                                                                    
+---------------------------------------- ---------------------------------------- ---------------------------------------- ----------------------------------------                                     
+MEM_PHONE                                MEM_ADDR                                                                                                                                                       
+---------------------------------------- ----------------------------------------                                                                                                                       
+¿À·»Áö                                   Oragne1                                  1234                                     Orange@test.com                                                              
+044                                      È«ÀÍ´ëÇÐ±³                                                                                                                                                     
+                                                                                                                                                                                                        
+¿À·»Áö                                   Oragne2                                  1234                                     Orange@test.com                                                              
+044                                      È«ÀÍ´ëÇÐ±³                                                                                                                                                     
+                                                                                                                                                                                                        
+¿À·»Áö                                   Oragne3                                  1234                                     Orange@test.com                                                              
+044                                      È«ÀÍ´ëÇÐ±³                                                                                                                                                     
+                                                                                                                                                                                                        
+
+SQL> delete from membert01 where mem_id = 'orange1';
+
+0 rows deleted.
+
+SQL> ed
+Wrote file afiedt.buf
+
+  1* delete from membert01 where mem_id = 'Orange1'
+SQL> /
+
+0 rows deleted.
+
+SQL> run
+  1* delete from membert01 where mem_id = 'Orange1'
+
+0 rows deleted.
+
+SQL> delete from membert01 where mem_id = 'orange1';
+
+0 rows deleted.
+
+SQL> ed
+Wrote file afiedt.buf
+
+  1* delete from member01 where mem_id = 'Orange1'
+SQL> /
+delete from member01 where mem_id = 'Orange1'
+            *
+ERROR at line 1:
+ORA-00942: table or view does not exist 
+
+
+SQL> delete from member01 where mem_id = 'orange1';
+delete from member01 where mem_id = 'orange1'
+            *
+ERROR at line 1:
+ORA-00942: table or view does not exist 
+
+
+SQL> select * from membert01
+  2  ;
+
+MEM_NAME                                 MEM_ID                                   MEM_PWD                                  MEM_EMAIL                                                                    
+---------------------------------------- ---------------------------------------- ---------------------------------------- ----------------------------------------                                     
+MEM_PHONE                                MEM_ADDR                                                                                                                                                       
+---------------------------------------- ----------------------------------------                                                                                                                       
+¿À·»Áö                                   Oragne1                                  1234                                     Orange@test.com                                                              
+044                                      È«ÀÍ´ëÇÐ±³                                                                                                                                                     
+                                                                                                                                                                                                        
+¿À·»Áö                                   Oragne2                                  1234                                     Orange@test.com                                                              
+044                                      È«ÀÍ´ëÇÐ±³                                                                                                                                                     
+                                                                                                                                                                                                        
+¿À·»Áö                                   Oragne3                                  1234                                     Orange@test.com                                                              
+044                                      È«ÀÍ´ëÇÐ±³                                                                                                                                                     
+                                                                                                                                                                                                        
+
+SQL> delete from membert01 where mem_id = 'orange1';
+
+0 rows deleted.
+
+SQL> ed
+Wrote file afiedt.buf
+
+  1* delete from membert01 where mem_id = 'Orange1'
+SQL> /
+
+0 rows deleted.
+
+SQL> delete from membert01 where mem_id = 'orange1';
+
+0 rows deleted.
+
+SQL> ed
+Wrote file afiedt.buf
+
+  1* delete from membert01 where mem_id = 'Oragne1'
+SQL> /
+
+1 row deleted.
+
+SQL> select * from membert01
+  2  ;
+
+MEM_NAME                                 MEM_ID                                   MEM_PWD                                  MEM_EMAIL                                                                    
+---------------------------------------- ---------------------------------------- ---------------------------------------- ----------------------------------------                                     
+MEM_PHONE                                MEM_ADDR                                                                                                                                                       
+---------------------------------------- ----------------------------------------                                                                                                                       
+¿À·»Áö                                   Oragne2                                  1234                                     Orange@test.com                                                              
+044                                      È«ÀÍ´ëÇÐ±³                                                                                                                                                     
+                                                                                                                                                                                                        
+¿À·»Áö                                   Oragne3                                  1234                                     Orange@test.com                                                              
+044                                      È«ÀÍ´ëÇÐ±³                                                                                                                                                     
+                                                                                                                                                                                                        
+
+SQL> spool off

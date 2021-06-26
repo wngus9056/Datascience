@@ -1,0 +1,18 @@
+SQL> show user
+USER is "SCOTT"
+SQL> desc memberT01;
+ Name                                                                                                              Null?    Type
+ ----------------------------------------------------------------------------------------------------------------- -------- ----------------------------------------------------------------------------
+ MEM_ID                                                                                                                     VARCHAR2(15)
+ MEM_PWD                                                                                                                    VARCHAR2(15)
+
+SQL> drop table membert01;
+
+Table dropped.
+
+SQL> desc memberT01;
+ERROR:
+ORA-04043: object memberT01 does not exist 
+
+
+SQL> spool off

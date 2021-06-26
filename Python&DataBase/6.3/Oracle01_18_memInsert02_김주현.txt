@@ -1,0 +1,33 @@
+SQL> show user
+USER is "SCOTT"
+SQL> desc membert01
+ Name                                                                                                              Null?    Type
+ ----------------------------------------------------------------------------------------------------------------- -------- ----------------------------------------------------------------------------
+ MEM_NAME                                                                                                                   VARCHAR2(20)
+ MEM_ID                                                                                                                     VARCHAR2(20)
+ MEM_PWD                                                                                                                    VARCHAR2(20)
+ MEM_EMAIL                                                                                                                  VARCHAR2(20)
+ MEM_PHONE                                                                                                                  VARCHAR2(20)
+ MEM_ADDR                                                                                                                   VARCHAR2(20)
+
+SQL> insert into membert01
+  2  values ('¿À·»Áö', 'Oragne', '1234', 'Orange@test.com', '044', 'È«ÀÍ´ëÇÐ±³');
+
+1 row created.
+
+SQL> select * from membert01;
+
+MEM_NAME                                 MEM_ID                                   MEM_PWD                                  MEM_EMAIL                                                                    
+---------------------------------------- ---------------------------------------- ---------------------------------------- ----------------------------------------                                     
+MEM_PHONE                                MEM_ADDR                                                                                                                                                       
+---------------------------------------- ----------------------------------------                                                                                                                       
+¿À·»Áö                                   Orange                                   1234                                                                                                                  
+                                                                                                                                                                                                        
+                                                                                                                                                                                                        
+¿À·»Áö                                   Oragne                                   1234                                     Orange@test.com                                                              
+044                                      È«ÀÍ´ëÇÐ±³                                                                                                                                                     
+                                                                                                                                                                                                        
+
+SQL> show user
+USER is "SCOTT"
+SQL> spool off

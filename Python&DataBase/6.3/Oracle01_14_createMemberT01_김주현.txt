@@ -1,0 +1,36 @@
+SQL> show user
+USER is "SCOTT"
+SQL> create table memberT01 (mem_id varchar2(15), mem_pwd varchar2(15));
+
+Table created.
+
+SQL> select * from tab;
+
+TNAME                                                        TABTYPE         CLUSTERID                                                                                                                  
+------------------------------------------------------------ -------------- ----------                                                                                                                  
+MEMBERT01                                                    TABLE                                                                                                                                      
+
+SQL> select memberT01
+  2  ;
+
+*
+ERROR at line 2:
+ORA-00923: FROM keyword not found where expected 
+
+
+SQL> select memberT01;
+select memberT01
+               *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected 
+
+
+SQL> show user
+USER is "SCOTT"
+SQL> desc memberT01;
+ Name                                                                                                              Null?    Type
+ ----------------------------------------------------------------------------------------------------------------- -------- ----------------------------------------------------------------------------
+ MEM_ID                                                                                                                     VARCHAR2(15)
+ MEM_PWD                                                                                                                    VARCHAR2(15)
+
+SQL> spool off

@@ -1,0 +1,21 @@
+SQL> show user
+USER is "SCOTT"
+SQL> create table membert01 (mem_name varchar2(20), mem_id varchar2(20), mem_pwd varchar2(20), mem_email varchar2(20), mem_phone varchar2(20), mem_addr varchar2(20));
+
+Table created.
+
+SQL> select mem_name as "회원이름", mem_id as "아이디", mem_pwd as "비밀번호", mem_email as "이메일", mem_phone as "전화번호", mem_addr as "주소" from membert01;
+
+no rows selected
+
+SQL> desc membert01
+ Name                                                                                                              Null?    Type
+ ----------------------------------------------------------------------------------------------------------------- -------- ----------------------------------------------------------------------------
+ MEM_NAME                                                                                                                   VARCHAR2(20)
+ MEM_ID                                                                                                                     VARCHAR2(20)
+ MEM_PWD                                                                                                                    VARCHAR2(20)
+ MEM_EMAIL                                                                                                                  VARCHAR2(20)
+ MEM_PHONE                                                                                                                  VARCHAR2(20)
+ MEM_ADDR                                                                                                                   VARCHAR2(20)
+
+SQL> spool off
