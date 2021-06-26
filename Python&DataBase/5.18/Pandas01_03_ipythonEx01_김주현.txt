@@ -1,0 +1,16 @@
+
+In [10]: %who
+a        i       message
+
+In [11]: del i
+
+In [12]: %who
+a        message
+
+In [13]: %reset
+Once deleted, variables cannot be recovered. Proceed (y/[n])? y
+
+In [14]: %who
+Interactive namespace is empty.
+
+In [15]:

@@ -1,0 +1,6 @@
+
+
+print('='*15, " 메뉴선택 ", '='*15, end='\n\n')
+for x in range(4):
+	print(menu[x], end='')
+print('='*46)
