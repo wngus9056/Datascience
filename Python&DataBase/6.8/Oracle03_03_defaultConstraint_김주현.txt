@@ -1,0 +1,41 @@
+SQL> drop table sawontable;
+
+Table dropped.
+
+SQL> select sysdate from dual;
+
+SYSDATE
+--------
+21/06/08
+
+SQL> drop table sawontable;
+drop table sawontable
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+SQL> create table sawonTable (sabun number(3),
+  2  saname varchar2(10), deptno number(3),
+  3  sajob varchar2(10), sapay number(10),
+  4  sahire date default sysdate,
+  5  sasex varchar2(6),
+  6  samgr number(3),
+  7  constraint sawon_sasex_ck check(sasex in('남자', '여자'))
+  8  );
+
+Table created.
+
+SQL> insert into sawontable(sabun, saname) values(2, '한국남');
+
+1 row created.
+
+SQL> select * from sawontable;
+
+     SABUN SANAME                   DEPTNO SAJOB                     SAPAY SAHIRE   SASEX             SAMGR
+---------- -------------------- ---------- -------------------- ---------- -------- ------------ ----------
+         2 한국남                                                          21/06/08
+
+SQL> show user;
+USER is "SCOTT"
+SQL>
