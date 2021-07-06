@@ -1,0 +1,10 @@
+Core_Speed		MHz
+L2_Cache			KB
+Max_Power		Watts
+Memory			MB
+Memory_Bandwidth	GB/sec
+Memory_Bus		Bit
+Memory_Speed		MHz
+Pixel_Rate		GPixel/s
+Process			nm
+Texture_Rate		GTexel/s
