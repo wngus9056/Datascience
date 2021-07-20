@@ -1,5 +1,0 @@
-<?
-$tot=$kor + $eng + $math;
-$avg=$tot/3;
-echo "ÃÑÁ¡ : $tot, Æò±Õ : $avg";
-?>
